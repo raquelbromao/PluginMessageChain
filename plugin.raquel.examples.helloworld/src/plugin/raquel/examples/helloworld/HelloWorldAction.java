@@ -57,53 +57,6 @@ public class HelloWorldAction implements IWorkbenchWindowActionDelegate {
 		return projects;
 	}
 
-	/*public static void splitMessageChain(String s) {
-		// retira o ";" do final da string
-		s = s.replace(";", " ");
-
-		// Quebra a variável quando acha . e armazena a sobra numa posição do
-		// array aux
-		// a().b() -> . é descartando e a() fica em aux[0] e b() em aux[1]
-		String[] aux = s.split(Pattern.quote("."));
-
-		// Pega o tamanho da string aux
-		// Imprime a variável aux na tela
-		results.append("Objeto: " + aux[0] + "\n");
-		for (int i = 1; i < aux.length; i++) {
-			results.append("Método[" + i + "]: " + aux[i] + "\n");
-		}
-
-		results.append("_______________________________________________________\n");
-	}*/
-
-	/*public static void verificaMessageChain(String s) {
-		// verifica se a expressão coletada é igual ao regex criado
-		// não foi usado [;] no final do regex pq o compilador nem lê se não
-		// houver ele no final
-		if (s.matches("[\\w]+([\\.]+[\\w]+[(]+[)]){2,}")) { // "[\\w]+([\\.]+[\\w]+[(]+[?\\w]+[)]){2,}")
-			results.append("\nMessage Chain: " + s + "\n");
-			splitMessageChain(s);
-		} else {
-			results.append("\nNão é Message Chain: " + s + "\n_______________________________________________________\n");
-		}
-	}*/
-
-	/*private void analyseClass(ICompilationUnit classe) throws JavaModelException {
-		// ICompilationUnit unit = classe;
-		// now create the AST for the ICompilationUnits
-		CompilationUnit parse = parse(classe);
-		ExpressionInvoke visitor = new ExpressionInvoke();
-		parse.accept(visitor);
-
-		// Imprime na tela o nome do método e o tipo de retorno
-		for (ExpressionStatement method : visitor.getMethods()) {
-			String t = null;
-			t = method.getExpression().toString();
-
-			verificaMessageChain(t);
-		}
-	}*/
-
 	/**
 	 * Reads a ICompilationUnit and creates the AST DOM for manipulating the
 	 * Java source file
